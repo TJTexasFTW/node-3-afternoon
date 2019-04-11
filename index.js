@@ -6,8 +6,6 @@ const { SERVER_PORT, CONNECTION_STRING } = process.env;
 const products_controller = require("./products_controller");
 app.use(express.json());
 
-console.log(products_controller)
-
 massive(CONNECTION_STRING)
     .then(dbInstance => {
         app.set('db', dbInstance);
